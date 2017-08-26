@@ -1,0 +1,123 @@
+/*home组件*/
+.home .type {
+	background: #fff;
+	padding-top: 10px;
+	margin-bottom: 10px;
+}
+.home .type li {
+	float: left;
+	width: 20%;
+	text-align: center;
+	margin-bottom: 10px;
+}
+.home .type li img {
+	width: 60%;
+	height: 46px;
+	margin-bottom: 5px;
+}
+.home .type li a {
+	color: #666;
+	font-size: 12px;
+	text-decoration: none;
+}
+.home .ad-box{
+	height: 200px;
+	position: relative;
+	margin-bottom: 10px;
+}
+.home .cir-box{
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	z-index: 2;
+}
+.home .cir-box span{
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background-color: rgba(255,255,255,0.8);
+	margin-right: 10px;
+}
+.home .cir-box span:first-child{
+	background: rgba(0,0,0,0.8);;
+}
+.home .ad{
+	
+	background-color: #fff;
+	height: 100%;
+	position: relative;
+}
+.home .ad li{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width:100%;
+	height: 100%;
+}
+.home .ad li:first-child{
+	z-index: 1;
+}
+/* .home .ad li h3{
+	color: red;
+	font-size: 18px;
+	font-weight: bold;
+}
+.home .ad li p{
+	margin-bottom: 5px;
+} */
+.home .ad li img{
+	width: 100%;
+	height: 100%;
+}
+/* 商城新闻 */
+.home .news{
+	height: 50px;
+	line-height: 50px;
+	margin-bottom: 10px;
+	background-color: #fff;
+	margin: 0 10px;
+	margin-bottom: 10px;
+}
+.home .news .news-more{
+	float: right;
+	margin-right: 5px;
+}
+.home .news .news-logo{
+	float: left;
+	font-size: 20px;
+	color: #000;
+	font-weight: bold;
+	margin-left: 5px;
+}
+.home .news .news-box{
+	float: left;
+	height: 50px;
+	position: relative;
+	width: 200px;
+	margin-left: 10px;
+	overflow: hidden;
+}
+.home .news .news-box ul{
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 50px;
+	width: 100%;
+}
+.home .news .news-box ul li{
+	height: 50px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	background-color: #fff;
+}
+.home .news .news-box ul li a{
+	color: #000;
+	font-weight: bold;
+}
+.home .news .news-box ul li span{
+	color: red;
+}
+

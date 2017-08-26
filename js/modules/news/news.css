@@ -1,0 +1,13 @@
+.news-page .news-title{
+	margin-bottom: 10px;
+}
+.news-page .news-title img{
+	width: 100%;
+}
+.news-page ul li{
+	margin-bottom: 10px;
+	border: 10px solid #000;
+}
+.news-page ul li img{
+	width: 100%;
+}

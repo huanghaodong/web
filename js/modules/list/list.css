@@ -1,0 +1,87 @@
+.lists .type li{
+	width: 20%;
+	height: 40px;
+	line-height: 40px;
+	background-color: #fff;
+	border-right: 1px solid #efefef;
+	box-sizing : border-box;
+	float: left;
+	text-align: center;
+	position: relative;
+}
+.lists .type li:last-child{
+	border: none;
+}
+.lists .type li span{
+	position: relative;
+	border: 6px solid transparent;
+	border-top: 6px solid #666;
+	top: 13px;
+	left: 4px;
+}
+ .lists .type li .down-up{
+	position: absolute;
+	top:40px;
+	left:0;
+	width: 100%; 
+	background-color: #fff;
+	display: none;
+}
+.lists .type li .down-up p{
+	border-bottom: 1px solid #666;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+} 
+.list{
+	background-color: #fff;
+	padding: 0 10px;
+}
+.list li{
+	border-bottom: 1px solid #666;
+	padding: 10px 0;
+}
+.list li img{
+	float: left;
+	width: 120px;
+	height: 110px;
+}
+.list li .container{
+	margin-left: 130px;
+	height: 110px;
+	position: relative;
+}
+.list li .container h2{
+	font-size: 18px;
+	color: #000;
+	font-weight: bold;
+}
+.list li .container p{
+	position: absolute;
+	left: 0px;
+	bottom: 0px; 
+	width: 100%;
+}
+.list li .container p span:first-child{
+	font-size: 16px;
+	font-weight: bold;
+}
+.list li .container p span:nth-child(2){
+	text-decoration:line-through;
+	font-size: 12px;
+}
+.list li .container p span:last-child{
+	float: right;
+	color: #fff;
+	font-size: 12px;
+	padding: 5px;
+	background: #000;
+}
+.load-more{
+	height: 40px;
+	line-height: 40px;
+	width: 80%;
+	border: 1px solid #666;
+	text-align: center;
+	margin: 10px auto;
+}

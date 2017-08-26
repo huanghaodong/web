@@ -1,0 +1,222 @@
+.item{
+	position: relative;
+}
+.item .tips{
+	position: absolute;
+	top: 580px;
+	left: 50%;
+	margin-left: -176px;
+	width: 350px;
+	height: 120px;
+	border-radius: 5px;
+	text-align: center;
+	line-height: 120px;
+	border: 1px solid #666;
+	background-color: #fff;
+	display: none;
+}
+.item .tips .wao{
+	font-size: 30px;
+	color: red;
+	font-weight: bold;
+	float: left;
+	margin-left: 40px;
+}
+.item .tips .close{
+	width: 15px;
+	height: 15px;
+	line-height: 15px;
+	position: absolute;
+	right: 5px;
+	top: 5px;
+	background-color: #666;
+	color: #fff;
+}
+.item header{
+	background-color: #fff;
+}
+.item header .img{
+	position: relative;
+	overflow: hidden;
+	color: #555;
+	height: 400px;
+}
+.item header .img ul{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
+.item header .img ul li{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+}
+.item header .img img{
+	width: 100%;
+	height: 400px;
+}
+.item header .img ul li:first-child{
+	opacity: 1;
+}
+.item header .img .circles{
+	position: absolute;
+	left: 50%;
+	bottom: 30px;
+	margin-left: -40px;
+
+}
+.item header .img .circles span{
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background-color: #D8D8D8;
+	margin: 0 3px;
+}
+.item header .img .circles span:first-child{
+	background: #4A4A4A;
+}
+
+
+.item header .img h3,.item header .img p{
+	position: absolute;
+	left: 15px;
+}
+.item header .img h3{
+	top: 70%;
+	font-size: 30px;
+}
+.item header .img p{
+	top: 90%;
+	font-size: 16px;
+}
+.item .num{
+	height: 40px;
+	line-height: 40px;
+	padding: 10px;
+	border-bottom: 1px solid #666;
+}
+.item .num .price{
+	font-size: 30px;
+	color: #555;
+}
+.item .num .orprice{
+	text-decoration:line-through;
+	margin-left: 10px;
+}
+
+.item .size{
+	padding: 10px;
+}
+.item .size>div{
+	margin-left: 30px;
+	margin-bottom: 20px;
+}
+
+.item .size  .size-box span{
+	float: left;
+	width: 40px;
+	height: 30px;
+	line-height: 30px;
+	border: 1px solid #000;
+	margin-left: 20px;
+	text-align: center;
+	margin-bottom: 10px;
+	box-sizing:border-box;
+}
+.item .size  .color-box span{
+	float: left;
+	width: 40px;
+	height: 30px;
+	margin-left: 20px;
+	font-size: 0;
+}
+.item .size .num-box div{
+	width: 100px;
+	height: 30px;
+	line-height: 30px;
+	border: 1px solid #000;
+	text-align: center;
+	float: left;
+	margin-left: 20px;
+}
+.item .size .num-box div span{
+	float: left;
+	width: 30px;
+	height: 29px;
+	line-height: 29px;
+	border: 1px solid #000;
+}
+.item .size .num-box div span:last-child{
+	float: right;
+}
+.item  .yes-buy span{
+	display: inline-block;
+	float: left;
+	background-color: #555;
+	text-align: center;
+	color: #fff;
+	width: 110px;
+	height: 40px;
+	line-height: 40px;
+	margin: 0 20px;
+}
+.item  .yes-buy .buy{
+	float: right;
+
+}
+.item .nobuy{
+	padding-top: 20px;
+}
+.item .nobuy span{
+	display: inline-block;
+	float: left;
+	width: 50%;
+	padding: 10px 0;
+	color: deepskyblue;
+	text-align: center;
+}
+.item .nobuy span:last-child{
+	color: red;
+}
+.item .store{
+	margin-top: 30px;
+	background-color: #fff;
+	padding: 10px;
+}
+.item .store h1{
+	font-size: 30px;
+	border-bottom: 1px solid #ddd;
+	padding-bottom: 10px;
+}
+.item .store p{
+	padding: 4px 0;
+	color: #1D1D1D;
+	font-size: 13px;
+	line-height: 20px;
+}
+.item .store p:last-of-type{
+	border-bottom: 1px solid #ddd;
+}
+.item .store span{
+	color: deepskyblue;
+}
+.item .store ul{
+
+}
+.item .store ul li{
+	list-style-type: disc;
+	list-style-position: inside;
+	color: #1D1D1D;
+	font-size: 13px;
+	line-height: 20px;
+}
+.item .know h3{
+font-size: 20px;
+color: orange;
+}

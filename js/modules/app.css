@@ -1,0 +1,199 @@
+body{
+	display: block;
+	background-color: #efefef;
+}
+.header{
+	width: 100%;
+	z-index: 3;
+	height: 60px;
+	color: #fff;
+	line-height: 60px;
+	transition:all 1.5s;
+}
+.home-header{
+	position: fixed;
+	left: 0;
+	top: 0;
+	background:rgba(0,0,0,0);
+
+}
+.list-header{
+	position: relative;
+	background: #000!important;
+	left: 0;
+	top: 0;
+}
+.go-back{
+	float: left;
+	position: relative;
+}
+.go-back span{
+	border: 12px solid transparent;
+	border-right: 12px solid #fff;
+	position: absolute;
+	font-size: 0;
+	position: absolute;
+	left: 4px;
+	top: 18px;
+}
+
+.login{
+	float: right;
+	margin-right: 10px;
+}
+h1{
+	font-size: 20px;
+	text-align: center;
+}
+.search{
+	text-align: center;
+}
+.search input{
+	width: 50%;
+	border-radius: 5px;
+	height: 13px;
+	margin-bottom: 10px;
+	outline: none;
+	padding: 10px 20px;
+
+}
+
+/* 登录浮层 */
+.layer{
+	position: fixed;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	background: rgba(0,0,0,0.6);
+	z-index: 4;
+	display: none;
+}
+.layer-box{
+	position: absolute;
+	top: 50px;
+	left: -90%;
+	width: 90%;
+	bottom: 0;
+	background: #eee;
+	border-radius: 5px;
+	z-index: 5;
+	padding: 20px;
+	box-sizing:border-box;
+}
+.layer-box .user,.layer-box .pwd,.layer-box .sure,.layer-box button{
+	width: 100%;
+	height: 60px;
+	background:#fff;
+	margin-bottom: 20px;
+	line-height: 60px;
+	border-radius: 5px;
+}
+.layer-box input{
+	outline: none;
+	padding-left: 20px;
+}
+.layer-box .pwd div{
+	float: right;
+	width: 80px;
+	height: 40px;
+	border: 1px solid #ddd;
+	border-radius: 25px;
+	margin-top: 10px;
+	font-size: 10;
+	position: relative;
+	margin-right: 5px;
+	transition:all .5s;
+	line-height: 40px;
+	color: #fff;
+	text-indent: 10px;
+	background-color: #fff;
+}
+.layer-box .pwd div span{
+	display: inline-block;
+	width: 39px;
+	height: 39px;
+	border-radius: 50%;
+	border: 1px solid #ddd;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background-color: #fff;
+}
+.layer-box .sure span{
+	display: inline-block;
+	font-size: 0;
+	width: 80px;
+	height: 40px;
+	margin-top: 10px;
+	float: right;
+	margin-right: 5px;
+	border-left: 1px solid #ddd;
+}
+.layer-box .sure span img{
+	width: 100%;
+	height: 100%;
+}
+.layer-box button.button{
+	border: none;
+	background-color: #ddd;
+	letter-spacing: 5px;
+}
+.layer-box button.login-btn{
+	background:skyblue;
+}
+.layer-box .other{
+	padding: 40px;
+}
+.layer-box .other a{
+	display: inline-block;
+	width: 50px;
+	text-align: center;
+	color: #000;
+	font-size: 12px;
+}
+.layer-box .other a:first-child{
+	float: left;
+}
+.layer-box .other a:last-child{
+	float: right;
+}
+.layer-box .other  img{
+	width: 50px;
+	height: 50px;
+}
+.layer-box .other span{
+	color: #666;
+}
+
+/* 返回顶部 */
+.to-top{
+	display: none;
+	position: fixed;
+	top: 80%;
+	right: 5%;
+	z-index: 3;
+	width: 50px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	border: 1px solid #fff;
+	background: rgba(0,0,0,0.8);
+	border-radius: 50%;
+}
+.to-top span{
+	position: absolute;
+	width: 25px;
+	height: 25px;
+	border: 1px solid #fff;
+	border-radius: 50%;
+	top: 50%;
+	left: 50%;
+	margin-left: -23px;
+	margin-top: -23px;
+	color: #fff;
+	text-align: center;
+	font-size: 10px;
+	padding: 10px;
+	line-height: 13px;
+}

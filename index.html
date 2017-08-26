@@ -1,150 +1,215 @@
-﻿
 <!DOCTYPE html>
-<!--<html xmlns="http://www.w3.org/1999/xhtml" manifest="touch.manifest">-->
-<html>
+<html lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta http-equiv="Pragma" content="no-cache" />
-<meta http-equiv="Expires" content="-1" />
-<meta http-equiv="Cache-Control" content="no-cache" />
-<meta id="viewport" name="viewport" content="width=580,user-scalable=no" />
-<script type="text/javascript">
-	//贴心的设计...不要太感动...
-	window.ADVREDIRECT = 'http://www.51tingweikeji.com/youxi'; //广告跳转地址
-	window.GAMENAME = '樱木花道的主场';
-	window.TITLEDESCFORMAT = '我在' + window.GAMENAME + '中投进{0}球,小伙伴们谁敢来挑战!!!'; //可以分享时title的描述格式
-	var _getvp = document.getElementById('viewport');
-	if (_getvp) {
-		var _ua = navigator.userAgent.toLowerCase(), _setW = window.innerWidth > window.innerHeight ? window.innerWidth : window.innerHeight;
-		window.glsysw = 580;
-		_getvp.content = 'width=' + window.glsysw + ',user-scalable=no';
-		if (_ua.indexOf('android') >= 0) {
-			_getvp.content += ',uc-user-scalable=no,target-densitydpi=high-dpi';
-		}
-		_ua = _setW = null;
-	}
-	_getvp = null;
-</script>
-<meta name="oupengmobile" content="game,fullscreen" />
-<meta name="apple-mobile-web-app-capable" content="yes" />
-<meta name="apple-mobile-web-app-status-bar-style" content="black" />
-<link rel="apple-touch-icon-precomposed" href="icon.png" />
-<link rel="apple-touch-startup-image" href="startup.png">
-<link rel="shortcut icon" href="webIcon.ico" type="image/x-icon"/>
-<title>樱木花道的篮球主场</title>
-<style type="text/css">
-	body{
-        margin:0px;
-        /*background-color:#22416E;*/
-		 background-color:#000;
-        color:#6A6A6A;
-    }
-	canvas{
-		-ms-content-zooming:none;
-		-ms-touch-action:none;
-	}
-
-</style>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, width=device-width">
+	<title></title>
 </head>
-
+<style>
+	body{
+		display: none;
+	}
+</style>
 <body>
-<img src="img/icon.png" style="position:absolute;left:-10000px;top:-10000px" />
-<canvas id="linkScreen">
-	很遗憾，您的浏览器不支持HTML5，请使用支持HTML5的浏览器。
-</canvas>
-<script type="text/javascript" src="js/out.js?v=1.1"></script>
- <script language=javascript>
-		var mebtnopenurl = 'http://www.mycodes.net/166/';
-		window.shareData = {
-		        "imgUrl": "http://www.zzfriend.com/h5game/icon/ymhddzc.png",
-		        "timeLineLink": "http://www.zzfriend.com/demo/youxi/m/ymhddzc/",
-		        "tTitle": "樱木花道的主场",
-		        "tContent": "樱木花道的主场"
-		};
-				
-		function goHome(){
-			window.location=mebtnopenurl;
-		}
-		function clickMore(){
-			if((window.location+"").indexOf("zf",1)>0){
-				window.location = "http://www.zzfriend.com/demo/youxi/m/ymhddzc/";
-			 }
-			 else{
-				goHome();
-			 }
-		}
-		function dp_share(){
-			document.title ="我樱木花道30秒内投进"+myData.score+"球，牛川风神马的还在吗？";
-			document.getElementById("share").style.display="";
-			window.shareData.tTitle = document.title;
-		}
-		function dp_Ranking(){
-			window.location=mebtnopenurl;
-		}
 
-		function showAd(){
-		}
-		function hideAd(){
-		}
-		document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
-		    
-		    WeixinJSBridge.on('menu:share:appmessage', function(argv) {
-		        WeixinJSBridge.invoke('sendAppMessage', {
-		            "img_url": window.shareData.imgUrl,
-		            "link": window.shareData.timeLineLink,
-		            "desc": window.shareData.tContent,
-		            "title": window.shareData.tTitle
-		        }, onShareComplete);
-		    });
-
-		    WeixinJSBridge.on('menu:share:timeline', function(argv) {
-		        WeixinJSBridge.invoke('shareTimeline', {
-		            "img_url": window.shareData.imgUrl,
-		            "img_width": "640",
-		            "img_height": "640",
-		            "link": window.shareData.timeLineLink,
-		            "desc": window.shareData.tContent,
-		            "title": window.shareData.tTitle
-		        }, onShareComplete);
-		    });
-		}, false);
-		</script>
-		<div id=share style="display: none">
-			<img width=100% src="http://www.zzfriend.com/demo/youxi/m/ymhddzc/share.png"
-				style="position: fixed; z-index: 9999; top: 0; left: 0; display: "
-				ontouchstart="document.getElementById('share').style.display='none';" />
-		</div>
-		<div style="display: none;">
-			<script type="text/javascript">
-            var myData = { gameid: "ymhddzc" };
-            var domain = ["oixm.cn", "hiemma.cn", "peagame.net"][parseInt(Math.random() * 3)];
-			window.shareData.timeLineLink ="http://www.zzfriend.com/demo/youxi/m/ymhddzc/";
-			function dp_submitScore(score){
-				myData.score = parseInt(score);
-				myData.scoreName ="投进"+score+"球";
-				if(score>0){
-					if (confirm("你在30秒进了"+myData.score+"球，你的小伙伴儿知道吗？")){
-						dp_share();
-					}
-				}
-			}
-			function onShareComplete(res) {
-                if (localStorage.myuid && myData.score != undefined) {
-                    setTimeout(function(){
-                        if (confirm("要将成绩提交到杭州吃喝玩乐排行榜吗？")) {
-                            window.location = "http://www.mycodes.net/166/";
-                        }
-                        else {
-                            document.location.href = mebtnopenurl;
-                        }
-                    }, 500);
-                }
-				else {
-		        	document.location.href = mebtnopenurl;
-				}
-	        }
-			</script>
+<div id="app">
+	<!-- 登录页面居于最上一层 -->
+	<div class="layer">
+		<div class="layer-box">
+			<div class="user"><input type="text" placeholder="用户名/邮箱/已验证手机"></div>
+			<div class="pwd"><input type="password" placeholder="请输入密码"><div>abc<span v-on:click="showPwd"></span></div></div>
+			<div class="sure"><input type="text" placeholder="请输入验证码"><span v-on:click="changeSure"><img :src="'img/sure/'+sure[0].url" alt=""></span></div>
+			<button class="login-btn button" v-on:click="toLogin">登录</button>
+			<button class="button" v-on:click="goBackPage">返回</button>
+			<hr>
+			<div class="other">
+				<a href=""><img src="img/layer/01.jpg" alt=""><span>微信登录</span></a><a href=""><img src="img/layer/02.jpg" alt=""><span>QQ登录</span></a>
 			</div>
+		</div>
+	</div>
+	<!-- 返回顶部按钮 -->
+	<span v-on:click="toTop" class="to-top"><span>返回<br>顶部</span></span>
+	<!-- header部分 -->
+	<header class="header" :class="headerClass">
+		<div class="go-back" v-on:click="goBack"><span></span></div>
+		<div class="login" v-on:click="goLogin" v-show="showLogin">登录</div>
+		<!-- 根据showInput值决定是否显示输入框 -->
+		<div class="search" v-if="showInput" v-on:keydown.enter="sureEnter"><input type="text" placeholder="请输入搜索关键字" v-model="search" ></div>
+	</header>
+	
+	<!-- :abc="searchKey1" 获取父组件数据第一步 -->
+	<!-- <component> 组件通用的引入标签，会根据v-bind:is的值渲染相应的组件，这个值与各个组件注册时的Vue.component()的第一个参数对应 -->
+	<component v-bind:is="view" :abc="searchKey1"></component>
+	
+</div>
+
+<script src="js/lib/zepto.js"></script>
+<script src="js/lib/fx.js"></script>
+<script src="js/lib/fx_methods.js"></script>
+<!-- 定义模板 -->
+<!-- home首页页模板 -->
+<script type="text/template" id="tpl_home">
+	<section class="home">
+	<!-- 定义banner模块 -->
+		<div class="ad-box">
+			<ul class="ad clearfix">
+				<li v-for="item in ad">
+					<a :href="'#producte/'+item.id">
+						<img :src="'img/ad/'+item.url" alt="">
+					</a>
+				</li>
+			</ul>
+			<div class="cir-box">
+				<span v-for="item in ad"></span>
+			</div>
+		</div>
+		<!--定义分类模块-->
+		<ul class="type clearfix">
+			<li v-for="item in list"><a href="#list/type/{{item.id}}">
+					<img :src="'img/icon/'+ item.url" alt="">
+					<p>{{item.title}}</p>
+				</a>
+			</li>
+		</ul>
+		<!--定义快报模块-->
+		<div class="news">
+			<span class="news-logo">商城促销</span>
+			<div class="news-box">
+				<ul>
+					<li v-for="item in news"><a :href="'#news/'+ item.id" ><span>荐：</span>{{item.title}}</a></li>
+				</ul>
+			</div>
+			<span class="news-more">更多</span>
+		</div>
+		<!--首页列表模块-->
+		<ul class="list">
+			<li class="clearfix" v-for="item in items">
+				<a :href="'#producte/'+ item.id">
+					<img :src="'img/list/'+ item.img" alt="">
+					<div class="container">
+						<h2>{{item.title}}</h2>
+						<p>
+							<span>{{item.price | priceFilter}}</span>
+							<span>{{item.orignPrice | orignPriceFilter}}</span>
+							<span>{{item.sales | salesFilter}}</span>
+						</p>
+					</div>
+				</a>
+			</li>
+		</ul>
+	</section>	
+</script>
+<!-- list商品列表页模板 -->
+<script type="text/template" id="tpl_list">
+	<div class="lists">
+		<ul class="type clearfix">
+		<!-- 点击排序 -->
+		<li v-for="item in type" v-on:click="sort(item.key,$event)">{{item.value}}<span></span>
+			<div v-if="item.key === 'price'" class="down-up">
+				<p id="to-down">从高到低</p>
+				<p id="to-up">从低到高</p>
+			</div>
+		</li>
+		</ul>
+		<ul class="list">
+		<!-- abc的值从父组件传过来，用这个值筛选商品列表 -->
+			<li class="clearfix" v-for="item in items | filterBy abc">
+				<a :href="'#producte/'+ item.id">
+					<img :src="'img/list/'+ item.img" alt="">
+					<div class="container">
+						<h2>{{item.title}}</h2>
+						<p>
+							<span>{{item.price | priceFilter}}</span>
+							<span>{{item.orignPrice | orignPriceFilter}}</span>
+							<span>{{item.sales | salesFilter}}</span>
+						</p>
+					</div>
+				</a>
+			</li>
+		</ul>
+		<div class="load-more" v-on:click="loadMore">加载剩余{{other.length}}条</div>
+	</div>
+</script>
+<!-- producte商品详情页模板 -->
+<script type="text/template" id="tpl_producte">
+	<div class="item" >
+		<div class="tips">
+			<span class="wao">!</span>请先选择商品规格、款式或数量
+			<span class="close" v-on:click="closeTips">X</span>
+		</div>
+	<header>
+		<div class="img" v-on:touchstart="startTouch" v-on:touchend="endTouch" v-on:touchmove="moveTouch">
+			<ul>
+				<li v-for="item in useItem.src"><img :src="'img/item/' + item" alt=""></li>
+			</ul>
+			<div class="circles"><span v-for="item in useItem.src"></span></div>
+		</div>
+		<div class="num">
+			<span class="price">{{data.price | priceFilter}}</span>
+			<span class="orprice">{{data.orignPrice | orignPriceFilter}}</span>
+			
+		</div>
+		<div class="size">
+			尺码：<div class="size-box clearfix"><span v-for="item in data.size" v-on:click="addBorder(item,$event)">{{item}}</span></div>
+			颜色：<div class="color-box clearfix"><span v-for="item in data.goods" :style="{'background':item.color}" v-on:click="chageColor(item.id)"></span></div>
+			数量：<div class="num-box  clearfix"><div>{{proNum}}<span v-on:click="subNum">-</span><span v-on:click="addNum">+</span></div></div>
+		</div>
+		<div class="yes-buy clearfix">
+			<span class="shop-car" v-on:click="">加入购物车</span>
+			<span class="buy" v-on:click="pleaseLogin">立即购买</span>
+		</div>
+		<div class="nobuy clearfix">
+			<span>支持自动退货</span>
+			<span>支持随时退货</span>
+		</div>
+	</header>
+	<footer class="store know">
+		<h1>商品描述</h1>
+		<h3>商品优势</h3>
+		<p>{{data.advantage}}</p>
+		<h3>商品详情</h3>
+		<ul>
+			<li v-for="item in data.rules">{{item}}</li>
+		</ul>
+	</footer>
+	<section class="store">
+		<h1>店家信息</h1>
+		<p>{{data.storeName}}</p>
+		<p>{{data.storeAdress}}</p>
+	</section>
+	
+</div>
+</script>
+<!-- news新闻页模板 -->
+<script type="text/template" id="tpl_news">
+	<div class="news-page">
+		<div class="news-title"><img v-for="item in title" :src="'img/news/'+item.url"></div>
+		<ul>
+			<li v-for="item in list" :style="'border:10px solid '+ item.color"><a :href="'#producte/'+item.id"><img :src="'img/news/'+item.url" alt=""></a></li>
+		</ul>
+	</div>
+</script>
+<!--支付页面模板-->
+<script type="text/template" id="tpl_account">
+	<section class="account">
+			<div class="pro-detail">
+				<p>商品：<img v-if="src" :src="'img/item/'+src"></p>
+				<p>尺寸：<span>{{size}}</span></p>
+				<p>单价：<span class="font-red">{{data.price | priceFilter}}</span></p>
+				<p>数量：<span>{{proNum}}</span></p>
+			</div>
+			<div class="totall-price">
+				<p>共需支付：<span>{{data.price*proNum | priceFilter}}</span></p>
+			</div>
+			<div class="pay-method">
+				<ul class="clearfix">
+					<li v-for="item in payImg" ><img :src="'img/pay/'+item"  v-on:click="addBorder" alt=""><span></span></li>
+				</ul>
+				<button>立即支付</button>
+			</div>
+	</section>		
+</script>
+<script type="text/javascript" data-main="js/start.js" src="js/lib/require.js"></script>
 
 </body>
 </html>
